@@ -1,0 +1,17 @@
+{
+	"layouts": [
+		"tall",
+		"fullscreen"
+	],
+	"mod1": [
+		"option"
+	],
+	"mod2": [
+		"option",
+		"control"
+	],
+	"cycle-layout": {
+		"mod": "mod1",
+		"key": "1"
+	}
+}
