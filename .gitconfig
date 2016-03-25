@@ -1,5 +1,31 @@
+[alias]
+	# TBC
+	lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	lg = !"git lg1"
+[core]
+    editor = /usr/bin/vim
+	# Use custom `.gitignore`
+	excludesfile = ~/.gitignore
+	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
+	whitespace = space-before-tab,indent-with-non-tab,trailing-space
+	autocrlf = input
+[color]
+	# Use colors in Git commands that are capable of colored output when outputting to the terminal
+	ui = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
 [user]
 	name = Sam Wing
 	email = sampwing@gmail.com
-[core]
-	editor = vim
