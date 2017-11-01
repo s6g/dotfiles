@@ -1,6 +1,9 @@
 # find all dotfiles in this directory and copy to home
 find . -maxdepth 1 -type f -iname '.*' -exec cp -i {} ~/ \;
 
+# Install slate if we've added the dotfile but haven't installed the application
+[ -f ~/.slate ] && [ ! -f /Applications/Slate.app ] && cd /Applications && curl http://www.ninjamonkeysoftware.com/slate/versions/slate-latest.tar.gz | tar -xz
+
 ## VIM Specific
 
 # get vim plugin manager if it doesn't exist
