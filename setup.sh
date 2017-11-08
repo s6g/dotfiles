@@ -1,3 +1,11 @@
+## Brew
+[ ! `which brew` ] && /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" <<< ''
+
+[ ! `shopt -q globstar` ] && brew update && brew install bash
+
+# make sure the new bash is configured correctly
+[ ! $(cat /etc/shells  | grep `which bash`) ] && sudo -- sh -c "echo `which bash` >> /etc/shells" && chsh -s `which bash`
+
 # find all dotfiles in this directory and copy to home
 find . -maxdepth 1 -type f -iname '.*' -exec cp -i {} ~/ \;
 
