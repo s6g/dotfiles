@@ -4,6 +4,20 @@ hs.hotkey.bind({"alt"}, "R", function()
 end)
 hs.alert.show("Hammerspoon config loaded")
 
+-- fullscreen
+hs.hotkey.bind({"alt"}, "F", function()
+  local window = hs.window.focusedWindow()
+  local frame = window:frame()
+  local screen = window:screen()
+  local max = screen:frame()
+
+  frame.w = max.w
+  frame.h = max.h
+  frame.x = 0
+  frame.y = 0
+
+  window:setFrame(frame)
+end)
 -- slame window to the left or right
 function swipeWindowLeft(swipeLeft) 
   local window = hs.window.focusedWindow()
