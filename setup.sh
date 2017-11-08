@@ -1,8 +1,15 @@
 # find all dotfiles in this directory and copy to home
 find . -maxdepth 1 -type f -iname '.*' -exec cp -i {} ~/ \;
 
-# Install slate if we've added the dotfile but haven't installed the application
-[ -f ~/.slate ] && [ ! -f /Applications/Slate.app ] && cd /Applications && curl http://www.ninjamonkeysoftware.com/slate/versions/slate-latest.tar.gz | tar -xz
+## Hammerspoon specific
+
+# installation
+HAMMERSPOON_VERSION=0.9.57
+[ ! -d /Applications/Hammerspoon.app ] && cd /Applications && curl https://github.com/Hammerspoon/hammerspoon/releases/download/$HAMMERSPOON_VERSION/Hammerspoon-$HAMMERSPOON_VERSION.zip -o hammerspoon.zip && unzip -o hammerspoon.zip && rm hammerspoon.zip
+
+# configuration files
+[ ! -d ~/.hammerspoon ] && mkdir ~/.hammerspoon
+find .hammerspoon -maxdepth 1 -type f -iname '*.lua' -exec cp -i {} ~/.hammerspoon \;
 
 ## VIM Specific
 
