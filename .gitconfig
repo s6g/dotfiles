@@ -28,4 +28,6 @@
 	untracked = cyan
 [user]
 	name = Sam Wing
-	email = sampwing@gmail.com
+	email = swi@amzon.com
+[includeIf "gitdir:~/github/"]
+	path = .gitconfig-personal
