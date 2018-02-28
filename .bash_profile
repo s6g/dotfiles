@@ -170,3 +170,6 @@ function fta() {
 	find . -iname "*.$FILETYPE" | xargs -I {} bash -c 'git log -n 1 --pretty=format:"{}, %an, %ad" -- {} | grep -i $USER'
 }
 
+
+# z
+source ~/github/rupa/z/z.sh
