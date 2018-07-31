@@ -12,8 +12,8 @@ find . -maxdepth 1 -type f -iname '.*' -exec cp -i {} ~/ \;
 ## Hammerspoon specific
 
 # installation
-HAMMERSPOON_VERSION=0.9.57
-[ ! -d /Applications/Hammerspoon.app ] && cd /Applications && curl https://github.com/Hammerspoon/hammerspoon/releases/download/$HAMMERSPOON_VERSION/Hammerspoon-$HAMMERSPOON_VERSION.zip -o hammerspoon.zip && unzip -o hammerspoon.zip && rm hammerspoon.zip
+HAMMERSPOON_VERSION=0.9.70
+[ ! -d /Applications/Hammerspoon.app ] && cd /Applications && curl -L https://github.com/Hammerspoon/hammerspoon/releases/download/$HAMMERSPOON_VERSION/Hammerspoon-$HAMMERSPOON_VERSION.zip -o hammerspoon.zip && unzip -o hammerspoon.zip && rm hammerspoon.zip
 
 # configuration files
 [ ! -d ~/.hammerspoon ] && mkdir ~/.hammerspoon
