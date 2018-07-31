@@ -4,7 +4,7 @@
 	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
 	lg = !"git lg1"
 [core]
-    editor = /usr/bin/vim
+    editor = /usr/local/bin/vim
 	# Use custom `.gitignore`
 	excludesfile = ~/.gitignore
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
@@ -28,6 +28,6 @@
 	untracked = cyan
 [user]
 	name = Sam Wing
-	email = swi@amzon.com
+	email = sampwing@gmail.com
 [includeIf "gitdir:~/github/"]
 	path = .gitconfig-personal
