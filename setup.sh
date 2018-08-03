@@ -30,5 +30,8 @@ find .hammerspoon -maxdepth 1 -type f -iname '*.lua' -exec cp -i {} ~/.hammerspo
 # install vim plugins
 vim -c PlugInstall -c ':q' -c ':q'
 
+# install .editorconfig
+cp .editorconfig ~/.editorconfig
+
 # install z
 [ ! -f ~/github/rupa/z/z.sh ] && mkdir -p ~/github/rupa && cd ~/github/rupa && git clone https://github.com/rupa/z.git
